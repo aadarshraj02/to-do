@@ -15,7 +15,9 @@ const page = () => {
           placeholder="Enter Description Here..."
           className="text-2xl border-2 border-zinc-800 m-8 px-4 py-2"
         />
-        <button>Add Task</button>
+        <button className="bg-black text-white px-4 py-2 text-2xl font-bold rounded-xl m-5">
+          Add Task
+        </button>
       </form>
     </>
   );
