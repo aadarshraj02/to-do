@@ -9,6 +9,13 @@ const page = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    setMainTask([
+      ...mainTask,
+      {
+        title,
+        desc,
+      },
+    ]);
     setTitle("");
     setDescription("");
   };
