@@ -8,6 +8,8 @@ const page = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    setTitle("");
+    setDescription("");
   };
 
   return (
