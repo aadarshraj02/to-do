@@ -21,14 +21,20 @@ const page = () => {
   };
 
   let renderTask = <h2>No Task Available</h2>;
-  renderTask = mainTask.map((t, i) => {
-    return (
-      <div>
-        <h5>{t.title}</h5>
-        <h6>{t.description}</h6>
-      </div>
-    );
-  });
+
+  if (mainTask.length > 0) {
+    renderTask = mainTask.map((t, i) => {
+      return (
+        <li>
+          {" "}
+          <div className="flex justify-between mb-5">
+            <h5 className="text-2xl font-semibold">{t.title}</h5>
+            <h6 className="text-xl font-semibold">{t.description}</h6>
+          </div>
+        </li>
+      );
+    });
+  }
 
   return (
     <>
