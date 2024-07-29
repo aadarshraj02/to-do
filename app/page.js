@@ -5,6 +5,7 @@ import React, { useState } from "react";
 const page = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [mainTask, setMainTask] = useState([]);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -40,6 +41,8 @@ const page = () => {
           Add Task
         </button>
       </form>
+      <hr />
+      <div className="p-8 bg-slate-200"></div>
     </>
   );
 };
