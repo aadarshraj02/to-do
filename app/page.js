@@ -6,12 +6,16 @@ const page = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <h1 className="bg-black text-white p-5 text-5xl text-center font-bold ">
         The To Do List
       </h1>
-      <form>
+      <form onSubmit={submitHandler}>
         <input
           type="text"
           placeholder="Enter Tasks Here..."
