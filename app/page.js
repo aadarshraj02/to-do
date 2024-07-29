@@ -38,7 +38,7 @@ const page = () => {
             <h6 className="text-xl font-semibold">{t.description}</h6>
           </div>
           <button
-            onCLick={() => {
+            onClick={() => {
               deleteHandler(i);
             }}
             className="bg-red-400 text-white rounded bold px-4 py-2"
