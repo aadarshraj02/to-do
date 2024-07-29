@@ -25,12 +25,13 @@ const page = () => {
   if (mainTask.length > 0) {
     renderTask = mainTask.map((t, i) => {
       return (
-        <li>
+        <li className="flex items-center justify-between">
           {" "}
-          <div className="flex justify-between mb-5">
+          <div className="flex justify-between mb-5 w-2/3">
             <h5 className="text-2xl font-semibold">{t.title}</h5>
             <h6 className="text-xl font-semibold">{t.description}</h6>
           </div>
+          <button> Delete</button>
         </li>
       );
     });
