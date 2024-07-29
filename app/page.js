@@ -25,7 +25,7 @@ const page = () => {
   if (mainTask.length > 0) {
     renderTask = mainTask.map((t, i) => {
       return (
-        <li className="flex items-center justify-between mb-5">
+        <li key={i} className="flex items-center justify-between mb-5">
           {" "}
           <div className="flex justify-between items-center w-2/3">
             <h5 className="text-2xl font-semibold">{t.title}</h5>
