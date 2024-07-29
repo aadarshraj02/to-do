@@ -13,7 +13,7 @@ const page = () => {
       ...mainTask,
       {
         title,
-        desc,
+        description,
       },
     ]);
     setTitle("");
@@ -21,6 +21,14 @@ const page = () => {
   };
 
   let renderTask = <h2>No Task Available</h2>;
+  renderTask = mainTask.map((t, i) => {
+    return (
+      <div>
+        <h5>{t.title}</h5>
+        <h6>{t.description}</h6>
+      </div>
+    );
+  });
 
   return (
     <>
