@@ -44,7 +44,9 @@ const page = () => {
         </button>
       </form>
       <hr />
-      <div className="p-8 bg-slate-200"></div>
+      <div className="p-8 bg-slate-200">
+        <ul>{renderTask}</ul>
+      </div>
     </>
   );
 };
