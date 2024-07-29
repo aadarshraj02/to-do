@@ -20,6 +20,12 @@ const page = () => {
     setDescription("");
   };
 
+  const deleteHandler = (i) => {
+    let copyTask = [...mainTask];
+    copyTask.splice(i, 1);
+    setMainTask(copyTask);
+  };
+
   let renderTask = <h2>No Task Available</h2>;
 
   if (mainTask.length > 0) {
@@ -31,7 +37,12 @@ const page = () => {
             <h5 className="text-2xl font-semibold">{t.title}</h5>
             <h6 className="text-xl font-semibold">{t.description}</h6>
           </div>
-          <button className="bg-red-400 text-white rounded bold px-4 py-2">
+          <button
+            onCLick={() => {
+              deleteHandler(i);
+            }}
+            className="bg-red-400 text-white rounded bold px-4 py-2"
+          >
             {" "}
             Delete
           </button>
