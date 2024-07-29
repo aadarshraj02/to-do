@@ -1,4 +1,11 @@
+"use client";
+
+import React, { useState } from "react";
+
 const page = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
   return (
     <>
       <h1 className="bg-black text-white p-5 text-5xl text-center font-bold ">
